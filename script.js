@@ -73,7 +73,7 @@ startBtn.addEventListener("click", () => {
     document.body.style.background = "#0a0a0a";
     document.body.style.color = "#f5f5f5";
 
-    document.querySelector(".heart").style.display = "none";
+    document.querySelector(".heart").style.visibility = "hidden";
 
     document.querySelector(".cta").style.display = "none";
 
