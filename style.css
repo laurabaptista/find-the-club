@@ -83,11 +83,17 @@ body {
 .poster {
   width: min(100%, 600px);
 
-  min-height: 640px;
+  min-height: 100vh;
 
-  padding: 60px 20px 100px;
+  padding: 60px 20px;
 
   position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
 
   text-align: center;
 }
@@ -99,14 +105,6 @@ body {
 /* -------------------------- */
 
 .heart {
-  position: absolute;
-
-  top: 0;
-
-  left: 50%;
-
-  transform: translateX(calc(-50% - 4px));
-
   font-size: 14px;
 
   pointer-events: none;
@@ -311,8 +309,6 @@ body {
   display: flex;
 
   flex-direction: column;
-
-  justify-content: flex-start;
 
   align-items: center;
 
