@@ -105,6 +105,14 @@ body {
 /* -------------------------- */
 
 .heart {
+  position: absolute;
+
+  top: -40px;
+
+  left: 50%;
+
+  transform: translateX(calc(-50% - 8px));
+
   font-size: 14px;
 
   pointer-events: none;
