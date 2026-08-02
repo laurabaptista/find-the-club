@@ -117,7 +117,6 @@ body {
 
   letter-spacing: 6px;
 
-  opacity: 0.6;
 
   margin-top: 35px;
 
@@ -140,6 +139,8 @@ body {
   letter-spacing: 4px;
 
   font-weight: 300;
+
+  opacity: 0.75;
 }
 
 /* -------------------------- */
@@ -167,13 +168,13 @@ body {
 /* -------------------------- */
 
 .caption {
-  font-size: clamp(12px, 2.5vw, 16px);
+  font-size: clamp(16px, 5vw, 18px);
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
 
-  line-height: 1.5;
+  line-height: 1.45;
 
-  opacity: 0.75;
+  opacity: 0.45;
 
   font-weight: 300;
 
@@ -189,7 +190,7 @@ body {
 .cta {
   position: fixed;
 
-  bottom: 40px;
+  bottom: 220px;
   left: 50%;
 
   transform: translateX(-50%);
@@ -288,7 +289,7 @@ body {
 
   font-weight: 300;
 
-  line-height: 1.3;
+  line-height: 1.45;
 
   text-align: center;
 
@@ -342,11 +343,13 @@ body {
 }
 
 .quiz-question {
-  font-size: clamp(22px, 7vw, 22px);
+  font-size: clamp(16px, 5vw, 18px);
 
   font-weight: 300;
 
   line-height: 1.45;
+
+  letter-spacing: 1px;
 
   margin-bottom: 30px;
   margin margin-top: 30px;
@@ -418,6 +421,8 @@ body {
 
     animation:fade .6s ease;
 
+    margin-top:60px;
+
 }
 
 .club{
@@ -433,19 +438,6 @@ body {
     margin-top:60px;
 
     min-height:90px;
-
-}
-
-
-.details{
-
-    font-size:14px;
-
-    letter-spacing:3px;
-
-    opacity:.6;
-
-    margin-bottom:15px;
 
 }
 
@@ -465,7 +457,19 @@ body {
 
     margin-top:12px;
 
-    margin-bottom:65px;
+    margin-bottom:55px;
+
+}
+
+.details{
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    opacity:.6;
+
+    margin-bottom:25px;
 
 }
 

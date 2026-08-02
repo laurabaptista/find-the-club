@@ -101,7 +101,7 @@ function playIntro() {
 
       smile: "assets/smile.svg",
 
-      time: 2000,
+      time: 1700,
     },
 
     {
@@ -109,7 +109,7 @@ function playIntro() {
 
       smile: "assets/smile-wink.svg",
 
-      time: 2700,
+      time: 2500,
     },
 
     {
@@ -117,7 +117,7 @@ function playIntro() {
 
       smile: "assets/smile.svg",
 
-      time: 2600,
+      time: 2300,
     },
   ];
 
@@ -187,9 +187,9 @@ function showQuestion2() {
 
       <button class="answer" data-correct="false">colorido</button>
 
-      <button class="answer" data-correct="true">all black</button>
-
       <button class="answer" data-correct="false">branco</button>
+
+      <button class="answer" data-correct="true">all black</button>
 
     </div>
 
@@ -219,11 +219,11 @@ don't forget! 🤍`,
           );
         } else if (nextQuestion === showReveal) {
           showSuccess(
-            `ok...<br><br>
+            `yeah!<br><br>
 
-are you ready?`,
+you are ready.`,
             showReveal,
-            4500,
+            3000,
           );
         }
       } else {
@@ -253,11 +253,11 @@ function showQuestion3() {
         vamos celebrar esta noite?
       </h2>
 
+      <button class="answer" data-correct="true">num antigo mercado</button>
+
       <button class="answer" data-correct="false">numa praia</button>
 
       <button class="answer" data-correct="false">numa quinta</button>
-
-      <button class="answer" data-correct="true">num antigo mercado</button>
 
       <button class="answer" data-correct="false">num rooftop</button>
 
@@ -268,7 +268,7 @@ function showQuestion3() {
   addQuestionEvents(showReveal);
 }
 
-function showSuccess(text, nextQuestion, delay = 3200) {
+function showSuccess(text, nextQuestion, delay = 2800) {
   loading.innerHTML = `
 
     <div class="loading-message">
@@ -357,6 +357,12 @@ function revealClub() {
 
   let's celebrate 🤍<br>
   see you there.
+
+</div>
+
+<div class="details">
+
+  friends · music · chaos
 
 </div>
 
