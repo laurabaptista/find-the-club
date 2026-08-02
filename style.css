@@ -139,9 +139,9 @@ body {
 /* -------------------------- */
 
 .countdown {
-  margin-top: 50px;
+  margin-top: 10px;
 
-  margin-bottom: 90px;
+  margin-bottom: 40px;
 
   font-size: clamp(16px, 3vw, 20px);
 
@@ -197,7 +197,7 @@ body {
 /* -------------------------- */
 
 .cta {
-  margin-top: 50px;
+  margin-top: 1px;
 
   text-decoration: none;
 
