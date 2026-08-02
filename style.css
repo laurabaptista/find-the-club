@@ -130,6 +130,10 @@ body {
 
   font-size: clamp(20px, 4vw, 30px);
 
+  font-weight: 300;
+
+  opacity: 0.85;
+
   letter-spacing: 6px;
 
   transition: color 0.45s ease;
