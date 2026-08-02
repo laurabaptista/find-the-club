@@ -214,7 +214,7 @@ quem diria? 🤍`,
           showSuccess(
             `all black.<br><br>
 
-don't forget! 🤍`,
+never forget! 🤍`,
             showQuestion3,
           );
         } else if (nextQuestion === showReveal) {
