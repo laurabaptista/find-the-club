@@ -201,44 +201,46 @@ function showQuestion2() {
 function addQuestionEvents(nextQuestion) {
   document.querySelectorAll(".answer").forEach((button) => {
     button.addEventListener("click", () => {
-      if (button.dataset.correct === "true") {
-        if (nextQuestion === showQuestion2) {
-          showSuccess(
-            `uau!!!<br><br>
+      const isCorrect = button.dataset.correct === "true";
+
+      document.querySelectorAll(".answer").forEach((b) => (b.disabled = true));
+
+      button.classList.add(isCorrect ? "correct" : "wrong");
+
+      setTimeout(() => {
+        if (isCorrect) {
+          if (nextQuestion === showQuestion2) {
+            showSuccess(
+              `uau!!!<br><br>
             11 anos...<br><br>
 
 quem diria? 🤍`,
-            showQuestion2,
-          );
-        } else if (nextQuestion === showQuestion3) {
-          showSuccess(
-            `all black.<br><br>
+              showQuestion2,
+            );
+          } else if (nextQuestion === showQuestion3) {
+            showSuccess(
+              `all black 🖤<br><br>
 
-never forget! 🤍`,
-            showQuestion3,
-          );
-        } else if (nextQuestion === showReveal) {
-          showSuccess(
-            `yeah!<br><br>
-
-you are ready.`,
-            showReveal,
-            3000,
-          );
-        }
-      } else {
-        let retryQuestion;
-
-        if (nextQuestion === showQuestion2) {
-          retryQuestion = showQuestion1;
-        } else if (nextQuestion === showQuestion3) {
-          retryQuestion = showQuestion2;
+never forget.`,
+              showQuestion3,
+            );
+          } else if (nextQuestion === showReveal) {
+            showReveal();
+          }
         } else {
-          retryQuestion = showQuestion3;
-        }
+          let retryQuestion;
 
-        showFail(retryQuestion);
-      }
+          if (nextQuestion === showQuestion2) {
+            retryQuestion = showQuestion1;
+          } else if (nextQuestion === showQuestion3) {
+            retryQuestion = showQuestion2;
+          } else {
+            retryQuestion = showQuestion3;
+          }
+
+          showFail(retryQuestion);
+        }
+      }, 450);
     });
   });
 }
@@ -314,33 +316,45 @@ function showFail(previousQuestion) {
 function showReveal() {
   loading.innerHTML = `
 
-    <div class="loading-message" id="countdownReveal">
+  <div class="loading-message">
 
-      3
+    <div id="revealText">
+
+      yeah!<br><br>
+
+      now you are ready.
 
     </div>
 
-  `;
+    <div class="reveal-countdown" id="countdownReveal"></div>
+
+  </div>
+
+`;
 
   const countdown = document.getElementById("countdownReveal");
 
   setTimeout(() => {
+    countdown.textContent = "3";
+  }, 3000);
+
+  setTimeout(() => {
     countdown.textContent = "2";
-  }, 1000);
+  }, 4000);
 
   setTimeout(() => {
     countdown.textContent = "1";
-  }, 2000);
+  }, 5000);
 
   setTimeout(() => {
     revealClub();
-  }, 3000);
+  }, 6000);
 }
 
 function revealClub() {
   loading.innerHTML = `
 
-    <div class="reveal">
+    <div class="reveal fade-in">
 
       <h1 class="club" id="clubName"></h1>
 
@@ -401,7 +415,7 @@ function typeClub() {
 
       setTimeout(() => {
         document.getElementById("mapsBtn").classList.remove("hidden");
-      }, 500);
+      }, 4700);
     }
   }, 120);
 }
